@@ -11,7 +11,6 @@ const connect = async () => {
     console.log("Failed to connect");
   }
 };
-asdasds;
 
 const app = express();
 const PORT = process.env.PORT || 5000;
