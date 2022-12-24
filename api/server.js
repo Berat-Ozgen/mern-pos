@@ -9,6 +9,8 @@ dotenv.config();
 
 // routes
 const categoryRoute = require("./routes/categories");
+const productRoute = require("./routes/products.js");
+const billRoute = require("./routes/bills.js");
 
 const PORT = process.env.PORT || 5000;
 
@@ -26,6 +28,8 @@ app.use(express.json());
 app.use(cors());
 
 app.use("/api/category", categoryRoute);
+app.use("/api/products", productRoute);
+app.use("/api/bills", billRoute);
 
 app.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
