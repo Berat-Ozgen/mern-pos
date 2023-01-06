@@ -19,7 +19,7 @@ router.post("/add-product", async (req, res) => {
     await newProduct.save();
     res.status(200).json("Item added successfully.");
   } catch (error) {
-    res.status(400).json(error);
+    res.status(500).json(error);
   }
 });
 

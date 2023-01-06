@@ -21,7 +21,7 @@ router.post("/add-category", async (req, res) => {
       .status(200)
       .json(`${newCategory.title} kategorilere  başarılı bir şekilde eklendi`);
   } catch (error) {
-    res.status(400).json(error);
+    res.status(500).json(error);
   }
 });
 
